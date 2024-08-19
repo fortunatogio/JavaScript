@@ -1,5 +1,5 @@
 let x = prompt("Digite um número inteiro positivo:","");
-resultado = x%2;
+resultado = x % 2;
 if(resultado == 0){
     alert("O número é par!")
 }
