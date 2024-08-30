@@ -14,12 +14,6 @@
         background-color: #000;
         color: #fff;
     }
-    
-    h1 {
-        text-align: center;
-        color: #9c2464;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
     div {
     display: flex;
     justify-content: center;
@@ -53,17 +47,37 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-}
-.footer-image {
+    }
+    .footer-image {
     max-width: 100%;
     height: auto;
-}
+    }
+    #currentDate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px; /* Ajuste a largura conforme necessário */
+        height: 50px; /* Ajuste a altura conforme necessário */
+        background-color: #000000; /* Cor de fundo */
+        color: #9c2464; /* Cor do texto */
+        border: 2px solid #9c2464; /* Cor da borda */
+        border-radius: 8px; /* Borda arredondada */
+        font-size: 1.5em; /* Tamanho da fonte */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Família da fonte */
+        text-align: center; /* Centraliza o texto */
+        margin-top: 200px; /* Margem ao redor */
+        padding: 15px; /* Preenchimento interno */
+    }
+    #currentDate:hover {
+        background-color: #af6789; /* Cor de fundo ao passar o mouse */
+    }
 </style>
 </head>
 <body>
+<div>
     <p id="currentDate"></p>
     <script>document.getElementById('currentDate').textContent = formattedDate;</script>
-    <h1>Deseja voltar ao menu de exercícios?</h1>
+</div>
 <div>
     <ul>
         <li><a href="exer_sem2.html" class="box-link">Voltar aos exercícios semanais</a></li>
