@@ -8,9 +8,6 @@ function updateClock() {
     
     document.getElementById('clock').textContent = currentTime;
 
-    // Chama a função novamente após 1 segundo
     setTimeout(updateClock, 1000);
 }
-
-// Inicia a atualização do relógio
 updateClock();
