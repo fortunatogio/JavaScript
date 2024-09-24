@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados Cadastrados</title>
+<style>
+body {
+        background-color: black;
+        text-align: center;
+        color: #9c2464;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.dados {
+    color: black;
+    background-color: #af6789;
+    border: 2px solid #9c2464;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 20px;
+}
+a.box-link {
+    display: block;
+    text-decoration: none;
+    color: #9c2464;
+    font-weight: bold;
+    border: 2px solid #9c2464;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+    max-width: 350px;
+}
+a.box-link:hover {
+    background-color: #af6789;
+}
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.footer-image {
+    max-width: 100%;
+    height: auto;
+}
+</style>
 </head>
 <body>
     <h1>Dados Cadastrados</h1>
-    <div class="dados-cadastrados">
+    <div class="dados">
         <p><strong>Nome:</strong> <span id="nomeResultado"></span></p>
         <p><strong>Email:</strong> <span id="emailResultado"></span></p>
         <p><strong>Data de Nascimento:</strong> <span id="dataNascimentoResultado"></span></p>
@@ -34,5 +76,13 @@
             document.getElementById('matriculaResultado').textContent = localStorage.getItem('matricula');
         }
     </script>
+
+    <div>
+        <p><a href="exer_sem4.html" class="box-link">Voltar aos exercícios semanais</a></li></p>
+    </div>
+
+    <footer>
+        <img src="onion.png" alt="Cebola Roxa" class="footer-image">
+    </footer>
 </body>
 </html>

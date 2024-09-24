@@ -119,5 +119,5 @@ document.getElementById('cadastroForm').addEventListener('submit', function (eve
     }
 
     
-    window.location.href = 'resultado.html';
+    window.location.href = 'produto.html';
 });
