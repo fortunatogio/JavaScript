@@ -1,7 +1,10 @@
+console.log('Script exer1_6.js foi carregado');
+
+
 const Letreiro = () => {
     const [texto, setTexto] = React.useState('');
     const frase = "Venha estudar na Fatec";
-    const velocidade = 100; 
+    const velocidade = 200; 
   
     React.useEffect(() => {
       let index = 0;
