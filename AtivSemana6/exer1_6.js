@@ -1,28 +1,34 @@
-import React, { useState, useEffect } from "react";
-
-function Letreiro() {
-  const [texto, setTexto] = useState("");
-  const mensagem = "Venha estudar na Fatec"; 
-  const intervalo = 150; 
-
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      setTexto((prev) => prev + mensagem[index]); 
-      index++;
-      if (index === mensagem.length) {
-        clearInterval(timer); 
-      }
-    }, intervalo);
-
-    return () => clearInterval(timer); 
-  }, []);
-
-  return (
-    <div>
-      <h1>{texto}</h1> {}
-    </div>
-  );
-}
-
-export default Letreiro;
+const Letreiro = () => {
+    const [texto, setTexto] = React.useState('');
+    const frase = "Venha estudar na Fatec";
+    const velocidade = 100; 
+  
+    React.useEffect(() => {
+      let index = 0;
+      const intervalo = setInterval(() => {
+        setTexto((valorAtual) => valorAtual + frase[index]);
+        index++;
+        if (index === frase.length) {
+          clearInterval(intervalo);
+        }
+      }, velocidade);
+      return () => clearInterval(intervalo);
+    }, []);
+  
+    return (
+      <div className="letreiro">
+        <p>{texto}</p>
+      </div>
+    );
+  };
+  
+  const App = () => {
+    return (
+      <div>
+        <Letreiro />
+      </div>
+    );
+  };
+  
+  ReactDOM.render(<App />, document.getElementById('root'));
+  
